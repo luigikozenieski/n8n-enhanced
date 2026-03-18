@@ -26,7 +26,7 @@ RUN npm install -g pnpm@10.18.3
 RUN sed -i '/"prepare":/d; /"preinstall":/d' package.json
 
 # Install dependencies and build
-RUN pnpm install --frozen-lockfile
+RUN pnpm install --no-frozen-lockfile
 RUN pnpm build
 
 # Production stage
